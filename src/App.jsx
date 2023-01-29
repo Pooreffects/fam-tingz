@@ -37,8 +37,8 @@ export default function App() {
     } else {
       return (
         <motion.section
-          initial={{ opacity: 0, translateY: 20 }}
-          animate={{ opacity: 1, translateY: 0 }}
+          initial={{ opacity: 0, translateX: -10 }}
+          animate={{ opacity: 1, translateX: 0 }}
           transition={{ delay: 2, duration: 0.5, ease: 'linear' }}
           className="flex items-center content-center justify-center gap-3 border-2 rounded-lg py-3 bg-gray-900 hover:bg-gray-800 text-red-400  hover:bg-texture hover:bg-cover hover:-translate-y-[6px] hover:cursor-pointer transition-all duration-150 ease-in-out p-6 "
         >
