@@ -37,7 +37,7 @@ export default function App() {
     } else {
       return (
         <motion.section
-          initial={{ opacity: 0, translateX: '-10' }}
+          initial={{ opacity: 0, translateX: -10 }}
           animate={{ opacity: 1, translateX: 0 }}
           transition={{ delay: 2, duration: 0.5, ease: 'linear' }}
           className="flex items-center content-center justify-center gap-3 border-2 rounded-lg py-3 bg-gray-900 hover:bg-gray-800 text-red-400  hover:bg-texture hover:bg-cover hover:-translate-y-[6px] hover:cursor-pointer transition-all duration-150 ease-in-out p-6 "
@@ -74,7 +74,7 @@ export default function App() {
       <div className="container mx-auto flex flex-col items-center justify-center gap-14 w-full h-full">
         <div className="flex flex-col items-center gap-6">
           <motion.h1
-            initial={{ opacity: 0, translateY: -'20' }}
+            initial={{ opacity: 0, translateY: -20 }}
             animate={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.8, ease: 'backIn' }}
             className="text-center tracking-tight md:tracking-normal lg:tracking-wide xl:tracking-wide font-secondary text-xl lg:text-3xl xl:text-3xl md:2xl font-semibold text-slate-200 break-words"
@@ -88,7 +88,7 @@ export default function App() {
             {``} huh?
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, translateY: '20' }}
+            initial={{ opacity: 0, translateY: 20 }}
             animate={{ opacity: 1, translateY: 0 }}
             transition={{ delay: 0.5, duration: 0.8, ease: 'backIn' }}
             className="text-center font-semibold font-secondary text-sm tracking-wide text-red-300 break-words"
@@ -98,7 +98,7 @@ export default function App() {
           </motion.p>
         </div>
         <motion.div
-          initial={{ opacity: 0, translateX: '20' }}
+          initial={{ opacity: 0, translateX: 20 }}
           animate={{ opacity: 1, translateX: 0 }}
           transition={{
             delay: 1,
@@ -121,7 +121,7 @@ export default function App() {
         </motion.div>
         <div className="flex flex-col items-center py-2 gap-10">
           <motion.h3
-            initial={{ opacity: 0, translateX: '20' }}
+            initial={{ opacity: 0, translateX: 20 }}
             animate={{ opacity: 1, translateX: 0 }}
             transition={{ delay: 1.2, duration: 0.8, ease: 'backIn' }}
             className="text-center font-semibold break-words text-base font-primary tracking-wide md:text-xl lg:text-xl text-slate-300 px-8"
