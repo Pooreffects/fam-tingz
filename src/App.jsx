@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import BelovedList from './components/BelovedList';
 import Countdown from 'react-countdown';
+import { motion } from 'framer-motion';
 
 export default function App() {
   const [lovers, setLovers] = useState([
@@ -35,7 +36,12 @@ export default function App() {
       );
     } else {
       return (
-        <section className="flex items-center content-center justify-center gap-3 border-2 rounded-lg py-3 bg-gray-900 hover:bg-gray-800 text-red-400  hover:bg-texture hover:bg-cover hover:-translate-y-[6px] hover:cursor-pointer transition-all duration-150 ease-in-out p-6 ">
+        <motion.section
+          initial={{ opacity: 0, translateY: 20 }}
+          animate={{ opacity: 1, translateY: 0 }}
+          transition={{ delay: 2, duration: 0.5, ease: 'linear' }}
+          className="flex items-center content-center justify-center gap-3 border-2 rounded-lg py-3 bg-gray-900 hover:bg-gray-800 text-red-400  hover:bg-texture hover:bg-cover hover:-translate-y-[6px] hover:cursor-pointer transition-all duration-150 ease-in-out p-6 "
+        >
           <div className="flex flex-col items-center">
             <div className="font-semibold text-5xl">{hours}</div>
             <p className="text-base font-semibold text-slate-300 hover:text-slate-800">
@@ -58,7 +64,7 @@ export default function App() {
               Seconds
             </p>
           </div>
-        </section>
+        </motion.section>
       );
     }
   }
@@ -67,7 +73,12 @@ export default function App() {
     <main className="container mx-auto w-full h-full">
       <div className="container mx-auto flex flex-col items-center justify-center gap-14 w-full h-full">
         <div className="flex flex-col items-center gap-6">
-          <h1 className="text-center font-secondary text-xl lg:text-3xl xl:text-3xl md:2xl font-semibold text-slate-200 px-4 break-words">
+          <motion.h1
+            initial={{ opacity: 0, translateY: -20 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.8, ease: 'backIn' }}
+            className="text-center font-secondary text-xl lg:text-3xl xl:text-3xl md:2xl font-semibold text-slate-200 px-4 break-words"
+          >
             How much love do you carry
             <br />
             for the beloved
@@ -75,28 +86,50 @@ export default function App() {
               Mahdabs
             </span>
             huh?
-          </h1>
-          <p className="text-center font-semibold font-secondary text-sm tracking-wide text-red-300 break-words">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, translateY: 20 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ delay: 0.5, duration: 0.8, ease: 'backIn' }}
+            className="text-center font-semibold font-secondary text-sm tracking-wide text-red-300 break-words"
+          >
             -- By clicking each button, you could increment the love for one
             another --
-          </p>
+          </motion.p>
         </div>
-        <div className="flex items-center justify-center w-full md:gap-10 lg:gap-10 gap-6 sm:px-4">
+        <motion.div
+          initial={{ opacity: 0, translateX: 20 }}
+          animate={{ opacity: 1, translateX: 0 }}
+          transition={{
+            delay: 1,
+            staggerChildren: 0.3,
+            ease: 'easeIn',
+          }}
+          className="flex items-center justify-center w-full md:gap-10 lg:gap-10 gap-6 sm:px-4"
+        >
           {lovers.map((lover, index) => (
-            <button
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               key={index}
               onClick={() => handleIncrement(index)}
               className="border-2 p-2 border-slate-300 rounded-md text-sm font-secondary font-semibold text-slate-300 hover:bg-red-400 hover:text-slate-50 hover:-translate-y-[3px] transition-all duration-100 ease-out shadow"
             >
               {lover.name}!?
-            </button>
+            </motion.button>
           ))}
-        </div>
+        </motion.div>
         <div className="flex flex-col items-center py-2 gap-10">
-          <h3 className="text-center font-semibold break-words text-sm font-primary tracking-wide md:text-xl lg:text-xl text-slate-300 px-8">
+          <motion.h3
+            initial={{ opacity: 0, translateX: 20 }}
+            animate={{ opacity: 1, translateX: 0 }}
+            transition={{ delay: 1.2, duration: 0.8, ease: 'backIn' }}
+            className="text-center font-semibold break-words text-sm font-primary tracking-wide md:text-xl lg:text-xl text-slate-300 px-8"
+          >
             <span className="text-red-300">PS</span>: Guys you gotta wait till
             midnight to see who carries more love for one another 🤭
-          </h3>
+          </motion.h3>
+
           <Countdown date={date} renderer={renderer} daysInHours autoStart />
         </div>
       </div>
