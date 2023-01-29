@@ -77,15 +77,15 @@ export default function App() {
             initial={{ opacity: 0, translateY: -'20' }}
             animate={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.8, ease: 'backIn' }}
-            className="text-center font-secondary text-xl lg:text-3xl xl:text-3xl md:2xl font-semibold text-slate-200 px-4 break-words"
+            className="text-center tracking-tight md:tracking-normal lg:tracking-wide xl:tracking-wide font-secondary text-xl lg:text-3xl xl:text-3xl md:2xl font-semibold text-slate-200 px-4 break-words"
           >
             How much love do you carry
             <br />
             for the beloved
             <span className="text-red-300 italic hover:cursor-pointer">
-              Mahdabs
+              {``} Mahdabs
             </span>
-            huh?
+            {``} huh?
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, translateY: '20' }}
@@ -105,7 +105,7 @@ export default function App() {
             staggerChildren: 0.3,
             ease: 'easeIn',
           }}
-          className="flex items-center justify-center w-full md:gap-10 lg:gap-10 gap-6 sm:px-4"
+          className="flex items-center justify-center w-full md:gap-10 lg:gap-10 gap-4 sm:px-4"
         >
           {lovers.map((lover, index) => (
             <motion.button
@@ -124,7 +124,7 @@ export default function App() {
             initial={{ opacity: 0, translateX: '20' }}
             animate={{ opacity: 1, translateX: 0 }}
             transition={{ delay: 1.2, duration: 0.8, ease: 'backIn' }}
-            className="text-center font-semibold break-words text-sm font-primary tracking-wide md:text-xl lg:text-xl text-slate-300 px-8"
+            className="text-center font-semibold break-words text-base font-primary tracking-wide md:text-xl lg:text-xl text-slate-300 px-8"
           >
             <span className="text-red-300">PS</span>: Guys you gotta wait till
             midnight to see who carries more love for one another 🤭
