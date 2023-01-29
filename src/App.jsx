@@ -77,7 +77,7 @@ export default function App() {
             initial={{ opacity: 0, translateY: -'20' }}
             animate={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.8, ease: 'backIn' }}
-            className="text-center tracking-tight md:tracking-normal lg:tracking-wide xl:tracking-wide font-secondary text-xl lg:text-3xl xl:text-3xl md:2xl font-semibold text-slate-200 px-4 break-words"
+            className="text-center tracking-tight md:tracking-normal lg:tracking-wide xl:tracking-wide font-secondary text-xl lg:text-3xl xl:text-3xl md:2xl font-semibold text-slate-200 break-words"
           >
             How much love do you carry
             <br />
